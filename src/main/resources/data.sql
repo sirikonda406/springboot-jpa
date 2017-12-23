@@ -1,0 +1,1 @@
+INSERT INTO PERSON(empId,fName,lName,totalExp,salary) VALUES(243640,'Mahesh','Sirikonda','13','90000');
