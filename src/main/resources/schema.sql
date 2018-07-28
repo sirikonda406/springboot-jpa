@@ -1,11 +1,11 @@
-DROP TABLE Person;
+DROP TABLE Customer;
 
-create table Person
+create table Customer
 (
- empId integer not null,
+ customerId integer not null,
  fName varchar(255),
  lName varchar(255),
- totalExp varchar(255),
- salary varchar(255),
- primary key(empId)
+ accountType varchar(2),
+ accountBalance varchar(255),
+ primary key(customerId)
 );

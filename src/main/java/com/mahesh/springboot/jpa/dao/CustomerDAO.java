@@ -8,19 +8,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class PersonDAO {
+public class CustomerDAO {
 
 	@Autowired
 	JdbcTemplate jdbcteplate;
 
-	public List<Person> findAll() {
+	public List<Customer> findAll() {
 
-		List<Person> personList =new ArrayList<Person>();
+		List<Customer> customerList =new ArrayList<Customer>();
 
-		return personList;
+		return customerList;
 	}
 
-	public void savePerson(Person person){
+	public void savePerson(Customer customer){
 
 
 
