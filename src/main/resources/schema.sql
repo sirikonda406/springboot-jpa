@@ -2,10 +2,10 @@ DROP TABLE Customer;
 
 create table Customer
 (
- customerId integer not null,
- fName varchar(255),
- lName varchar(255),
- accountType varchar(2),
- accountBalance varchar(255),
- primary key(customerId)
+ customer_Id NUMBER not null,
+ f_Name varchar(255),
+ l_Name varchar(255),
+ account_Type varchar(2),
+ account_Balance varchar(255),
+ primary key(customer_Id)
 );

@@ -1,14 +1,20 @@
 package com.mahesh.springboot.jpa.dao;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name = "Customer")
 public class Customer {
 
-    private String customerId;
+    private Long customerId;
     private String fName;
     private String lName;
     private String accountType;
     private String accountBalance;
 
-    public Customer(String customerId, String fName, String lName, String accountType, String accountBalance) {
+    public Customer(Long customerId, String fName, String lName, String accountType, String accountBalance) {
         this.customerId = customerId;
         this.fName = fName;
         this.lName = lName;
@@ -29,15 +35,17 @@ public class Customer {
                 ", accountBalance='" + accountBalance + '\'' +
                 '}';
     }
-
-    public String getCustomerId() {
+    @Id
+    @Column(name = "customer_Id", insertable = false, updatable = false)
+    public Long getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(String customerId) {
+    public void setCustomerId(Long customerId) {
         this.customerId = customerId;
     }
 
+    @Column(name = "f_Name")
     public String getfName() {
         return fName;
     }
@@ -46,6 +54,7 @@ public class Customer {
         this.fName = fName;
     }
 
+    @Column(name = "l_Name")
     public String getlName() {
         return lName;
     }
@@ -54,6 +63,7 @@ public class Customer {
         this.lName = lName;
     }
 
+    @Column(name = "account_Type")
     public String getAccountType() {
         return accountType;
     }
@@ -62,6 +72,7 @@ public class Customer {
         this.accountType = accountType;
     }
 
+    @Column(name = "account_Balance")
     public String getAccountBalance() {
         return accountBalance;
     }
